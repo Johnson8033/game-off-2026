@@ -1,0 +1,4 @@
+join test_character center
+test_character: Hi!
+test_character: This is a test.
+test_character: Bye.
