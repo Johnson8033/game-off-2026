@@ -1,0 +1,21 @@
+
+{
+  "lines": [
+    {
+      "speaker": "cordelle",
+      "text": "Morning, Roy!"
+    },
+    {
+      "speaker": "roy",
+      "text": "What's so good about it?"
+    },
+    {
+      "speaker": "cordelle",
+      "text": "Have you been practising piano?"
+    },
+    {
+      "speaker": "roy",
+      "text": "...Maybe."
+    }
+  ]
+}

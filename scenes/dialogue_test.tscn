@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://gcghr15jm0gw"]
+
+[ext_resource type="Script" uid="uid://dxfwybquhnmcb" path="res://scripts/dialogue_test.gd" id="1_gquwp"]
+
+[node name="DialogueTest" type="Node" unique_id=125041131]
+script = ExtResource("1_gquwp")
+conversation_path = "res://dialogues/monday/day/cordelle_roy.json"
