@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://gcghr15jm0gw"]
 
 [ext_resource type="Script" uid="uid://dxfwybquhnmcb" path="res://scripts/dialogue_test.gd" id="1_gquwp"]
+[ext_resource type="Script" uid="uid://2bkaeg83adgw" path="res://scripts/dialogue/conversation_player.gd" id="2_se20b"]
 
-[node name="DialogueTest" type="Node" unique_id=125041131]
+[node name="DialogueTest" type="Node" unique_id=125041131 node_paths=PackedStringArray("player")]
 script = ExtResource("1_gquwp")
 conversation_path = "res://dialogues/monday/day/cordelle_roy.json"
+player = NodePath("ConversationPlayer")
+
+[node name="ConversationPlayer" type="Node" parent="." unique_id=1255214912]
+script = ExtResource("2_se20b")
