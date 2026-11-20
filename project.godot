@@ -20,8 +20,13 @@ Dialogic="*uid://ds2q0uclmolvu"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"cordelle": "res://dialogic/characters/cordelle.dch",
+"roy": "res://dialogic/characters/roy.dch"
+}
+directories/dtl_directory={
+"cordelle_roy": "res://dialogic/timelines/monday/day/cordelle_roy.dtl"
+}
 layout/style_directory={}
 
 [display]
