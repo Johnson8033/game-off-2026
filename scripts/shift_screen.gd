@@ -21,7 +21,7 @@ func _on_start_pressed() -> void:
 	start_button.disabled = true
 	status_label.text = "Shift in progress"
 
-	Dialogic.start(timeline)
+	Dialogic.start_timeline(timeline)
 
 
 func _on_timeline_ended() -> void:
