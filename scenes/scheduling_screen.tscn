@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bio827w7d0cig"]
 
 [ext_resource type="Script" uid="uid://n1ulnqvvkc05" path="res://scripts/scheduling_screen.gd" id="1_ijjfh"]
+[ext_resource type="Script" uid="uid://bfqo4jb7m4x26" path="res://scripts/employee_button.gd" id="2_a3c1e"]
 
 [node name="SchedulingScreen" type="Control" unique_id=731815415 node_paths=PackedStringArray("employee_buttons", "selection_label", "confirm_button")]
 layout_mode = 3
@@ -33,21 +34,28 @@ text = "	Assign 2 employees to the day shift"
 layout_mode = 2
 toggle_mode = true
 text = "Roy"
+script = ExtResource("2_a3c1e")
 
 [node name="CordelleButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1191052297]
 layout_mode = 2
 toggle_mode = true
 text = "Cordelle"
+script = ExtResource("2_a3c1e")
+employee_id = 1
 
 [node name="OleysaButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1288716728]
 layout_mode = 2
 toggle_mode = true
 text = "Oleysa"
+script = ExtResource("2_a3c1e")
+employee_id = 2
 
 [node name="DuraiButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1701847168]
 layout_mode = 2
 toggle_mode = true
 text = "Durai"
+script = ExtResource("2_a3c1e")
+employee_id = 3
 
 [node name="SelectionLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=515210205]
 layout_mode = 2

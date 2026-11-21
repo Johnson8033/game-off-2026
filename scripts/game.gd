@@ -12,8 +12,8 @@ func _ready() -> void:
 	)
 
 
-func _on_schedule_confirmed(day_employees: Array[String]) -> void:
-	if day_employees != ["Cordelle", "Roy"]:
+func _on_schedule_confirmed(day_employees: Array[Employee.Id]) -> void:
+	if day_employees != [Employee.Id.ROY, Employee.Id.CORDELLE]:
 		scheduling_screen.selection_label.text = (
             "Only Roy and Cordelle are available in this prototype."
 		)
