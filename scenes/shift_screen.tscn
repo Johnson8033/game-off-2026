@@ -66,9 +66,12 @@ clip_contents = true
 layout_mode = 2
 
 [node name="ColorRect" type="ColorRect" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent" unique_id=73095677]
-layout_mode = 0
-offset_right = 609.0
-offset_bottom = 616.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.4525857, 0.4525857, 0.4525857, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent" unique_id=1308568909]
@@ -86,23 +89,20 @@ size_flags_vertical = 3
 
 [node name="DialogueBox" type="PanelContainer" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer" unique_id=452072679]
 layout_mode = 2
-size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer/DialogueBox" unique_id=753179768]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="NameLabel" type="Label" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer/DialogueBox/VBoxContainer" unique_id=852627326 node_paths=PackedStringArray("name_label_root")]
+[node name="NameLabel" type="Label" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer/DialogueBox/VBoxContainer" unique_id=852627326]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 script = ExtResource("3_rouil")
-name_label_root = NodePath("../..")
 metadata/_custom_type_script = "uid://bak74s0kcr0ao"
 
 [node name="DailogText" type="RichTextLabel" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer/DialogueBox/VBoxContainer" unique_id=1495475194 node_paths=PackedStringArray("textbox_root")]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-size_flags_vertical = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_rouil")
 scroll_active = false
 script = ExtResource("4_37jfs")
