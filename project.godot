@@ -20,8 +20,17 @@ Dialogic="*uid://ds2q0uclmolvu"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"Cordelle": "res://data/characters/Cordelle.dch",
+"Durai": "res://data/characters/Durai.dch",
+"Oleysa": "res://data/characters/Oleysa.dch",
+"Roy": "res://data/characters/Roy.dch",
+"test_character": "res://data/characters/test_character.dch"
+}
+directories/dtl_directory={
+"Monday_Day_CD": "res://data/timelines/proof_of_concept/Monday_Day_CD.dtl",
+"test_timeline": "res://data/timelines/test_timeline.dtl"
+}
 layout/style_directory={}
 
 [display]

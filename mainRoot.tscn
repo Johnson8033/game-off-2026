@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://di4b5jfaih4x6"]
+
+[ext_resource type="Texture2D" uid="uid://c0w2y1org6sb8" path="res://icon.svg" id="1_wtcfe"]
+
+[node name="MainRootNode" type="Node2D" unique_id=1839634534]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=993097700]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_wtcfe")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
