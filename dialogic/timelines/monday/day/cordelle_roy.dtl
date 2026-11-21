@@ -1,5 +1,6 @@
 join roy left
 join cordelle right
+update roy right [move_time="1.0"]
 roy: Hm, hm hm...
 cordelle: ...Oh, hi!! Are you Roy?
 roy: Hi.
