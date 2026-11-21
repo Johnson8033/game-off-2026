@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://c83mqjbjaschf"]
+
+[ext_resource type="Script" uid="uid://d3j2og8et4yew" path="res://scripts/shift_screen.gd" id="1_u2nxn"]
+[ext_resource type="Resource" uid="uid://caq5bml66n7wm" path="res://dialogic/timelines/monday/day/cordelle_roy.dtl" id="2_r222v"]
+[ext_resource type="Script" uid="uid://d0ptqnbudhkyj" path="res://addons/dialogic/Modules/Character/node_portrait_container.gd" id="3_37jfs"]
+[ext_resource type="Script" uid="uid://bak74s0kcr0ao" path="res://addons/dialogic/Modules/Text/node_name_label.gd" id="3_rouil"]
+[ext_resource type="Script" uid="uid://drhfq6rmdeuri" path="res://addons/dialogic/Modules/Text/node_dialog_text.gd" id="4_37jfs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rouil"]
+bg_color = Color(0.13725491, 0.13725491, 0.13725491, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="ShiftScreen" type="Control" unique_id=914708762 node_paths=PackedStringArray("status_label", "start_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u2nxn")
+status_label = NodePath("MarginContainer/HBoxContainer/InfoPanel/MarginContainer/VBoxContainer/StatusLabel")
+start_button = NodePath("MarginContainer/HBoxContainer/InfoPanel/MarginContainer/VBoxContainer/StartButton")
+timeline = ExtResource("2_r222v")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=291944181]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1893382118]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="ClockPanel" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=1161956219]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/ClockPanel" unique_id=2097844154]
+layout_mode = 2
+
+[node name="TimeLabel" type="Label" parent="MarginContainer/HBoxContainer/ClockPanel/MarginContainer" unique_id=469111944]
+layout_mode = 2
+theme_override_font_sizes/font_size = 58
+text = "9:00"
+horizontal_alignment = 1
+
+[node name="CCTVPanel" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=2048247054]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.5
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/CCTVPanel" unique_id=1119541252]
+layout_mode = 2
+
+[node name="CCTVContent" type="Control" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer" unique_id=910717678]
+clip_contents = true
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent" unique_id=73095677]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.4525857, 0.4525857, 0.4525857, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent" unique_id=1308568909]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="PortraitArea" type="Control" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer" unique_id=828729560]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LeftPosition" type="Control" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer/PortraitArea" unique_id=751367774]
+anchors_preset = 0
+offset_right = 302.0
+offset_bottom = 472.0
+size_flags_horizontal = 3
+script = ExtResource("3_37jfs")
+container_ids = PackedStringArray("left")
+size_mode = 0
+metadata/_custom_type_script = "uid://d0ptqnbudhkyj"
+
+[node name="RightPosition" type="Control" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer/PortraitArea" unique_id=638361624]
+anchors_preset = 0
+offset_left = 306.0
+offset_right = 609.0
+offset_bottom = 472.0
+size_flags_horizontal = 3
+script = ExtResource("3_37jfs")
+container_ids = PackedStringArray("right")
+size_mode = 0
+metadata/_custom_type_script = "uid://d0ptqnbudhkyj"
+
+[node name="DialogueBox" type="PanelContainer" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer" unique_id=452072679]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer/DialogueBox" unique_id=753179768]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="NameLabel" type="Label" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer/DialogueBox/VBoxContainer" unique_id=852627326]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+script = ExtResource("3_rouil")
+metadata/_custom_type_script = "uid://bak74s0kcr0ao"
+
+[node name="DailogText" type="RichTextLabel" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer/DialogueBox/VBoxContainer" unique_id=1495475194 node_paths=PackedStringArray("textbox_root")]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_rouil")
+scroll_active = false
+script = ExtResource("4_37jfs")
+textbox_root = NodePath("../..")
+metadata/_custom_type_script = "uid://drhfq6rmdeuri"
+
+[node name="InfoPanel" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=1581364783]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/InfoPanel" unique_id=785402476]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/InfoPanel/MarginContainer" unique_id=1962315424]
+layout_mode = 2
+
+[node name="InfoLabel" type="Label" parent="MarginContainer/HBoxContainer/InfoPanel/MarginContainer/VBoxContainer" unique_id=1006784195]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Shift Info"
+horizontal_alignment = 1
+
+[node name="StatusLabel" type="Label" parent="MarginContainer/HBoxContainer/InfoPanel/MarginContainer/VBoxContainer" unique_id=894884420]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Ready"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="MarginContainer/HBoxContainer/InfoPanel/MarginContainer/VBoxContainer" unique_id=925710272]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Start Shift"
