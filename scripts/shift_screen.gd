@@ -1,3 +1,4 @@
+class_name ShiftScreen
 extends Control
 
 @export var status_label: Label
@@ -27,3 +28,35 @@ func _on_start_pressed() -> void:
 func _on_timeline_ended() -> void:
 	status_label.text = "Shift complete!"
 	start_button.disabled = false
+
+
+func configure(day_employees: Array[Employee.Id]) -> bool:
+	if day_employees.size() != 2:
+		return false
+
+	var ids: Array[String] = []
+
+	for employee in day_employees:
+		ids.append(Employee.to_dialogic_id(employee))
+
+	ids.sort()
+
+	var path := "res://dialogic/timelines/monday/day/%s_%s.dtl" % [
+		ids[0], ids[1]
+	]
+
+	if not ResourceLoader.exists(path):
+		push_warning("Timeline not found: " + path)
+		return false
+
+	timeline = load(path) as DialogicTimeline
+
+	if timeline == null:
+		return false
+
+	status_label.text = "Ready: %s + %s" % [
+		ids[0].capitalize(),
+		ids[1].capitalize()
+	]
+
+	return true

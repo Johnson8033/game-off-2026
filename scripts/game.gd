@@ -12,10 +12,12 @@ func _ready() -> void:
 	)
 
 
-func _on_schedule_confirmed(day_employees: Array[Employee.Id]) -> void:
-	if day_employees != [Employee.Id.ROY, Employee.Id.CORDELLE]:
+func _on_schedule_confirmed(
+	day_employees: Array[Employee.Id]
+) -> void:
+	if not shift_screen.configure(day_employees):
 		scheduling_screen.selection_label.text = (
-            "Only Roy and Cordelle are available in this prototype."
+            "No conversation available for this pairing."
 		)
 		return
 
