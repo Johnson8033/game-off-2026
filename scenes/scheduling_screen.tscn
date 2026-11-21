@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://bio827w7d0cig"]
+
+[ext_resource type="Script" uid="uid://n1ulnqvvkc05" path="res://scripts/scheduling_screen.gd" id="1_ijjfh"]
+
+[node name="SchedulingScreen" type="Control" unique_id=731815415 node_paths=PackedStringArray("employee_buttons", "selection_label", "confirm_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ijjfh")
+employee_buttons = [NodePath("CenterContainer/VBoxContainer/RoyButton"), NodePath("CenterContainer/VBoxContainer/CordelleButton"), NodePath("CenterContainer/VBoxContainer/OleysaButton"), NodePath("CenterContainer/VBoxContainer/DuraiButton")]
+selection_label = NodePath("CenterContainer/VBoxContainer/SelectionLabel")
+confirm_button = NodePath("CenterContainer/VBoxContainer/ConfirmButton")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1588419000]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=2095871967]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=703939224]
+layout_mode = 2
+text = "	Assign 2 employees to the day shift"
+
+[node name="RoyButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1651071212]
+layout_mode = 2
+toggle_mode = true
+text = "Roy"
+
+[node name="CordelleButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1191052297]
+layout_mode = 2
+toggle_mode = true
+text = "Cordelle"
+
+[node name="OleysaButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1288716728]
+layout_mode = 2
+toggle_mode = true
+text = "Oleysa"
+
+[node name="DuraiButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1701847168]
+layout_mode = 2
+toggle_mode = true
+text = "Durai"
+
+[node name="SelectionLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=515210205]
+layout_mode = 2
+text = "	Selected: 0/2"
+
+[node name="ConfirmButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1885524488]
+layout_mode = 2
+text = "	Confirm Schedule"
