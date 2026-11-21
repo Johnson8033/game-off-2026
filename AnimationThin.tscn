@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://cc3n8ru4op3v2"]
+
+[ext_resource type="Texture2D" uid="uid://c0w2y1org6sb8" path="res://icon.svg" id="1_yyvx7"]
+
+[sub_resource type="Animation" id="Animation_vo17g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(77, 89)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_xl3qx"]
+resource_name = "test"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.53),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(77, 89)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.54),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 2.911209]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_du3lp"]
+_data = {
+&"RESET": SubResource("Animation_vo17g"),
+&"test": SubResource("Animation_xl3qx")
+}
+
+[node name="AnimationThin" type="Node2D" unique_id=359086087]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=930784004]
+libraries/ = SubResource("AnimationLibrary_du3lp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1930289468]
+position = Vector2(77, 89)
+texture = ExtResource("1_yyvx7")

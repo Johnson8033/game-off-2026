@@ -24,10 +24,18 @@ Dialogic="*uid://ds2q0uclmolvu"
 directories/dch_directory={
 "cordelle": "res://dialogic/characters/cordelle.dch",
 "customer": "res://dialogic/characters/customer.dch",
+"durai": "res://dialogic/characters/durai.dch",
+"game": "res://dialogic/characters/game.dch",
+"oleysa": "res://dialogic/characters/oleysa.dch",
 "roy": "res://dialogic/characters/roy.dch"
 }
 directories/dtl_directory={
-"cordelle_roy": "res://dialogic/timelines/monday/day/cordelle_roy.dtl"
+"cordelle_durai": "res://dialogic/timelines/monday/day/cordelle_durai.dtl",
+"cordelle_oleysa": "res://dialogic/timelines/monday/day/cordelle_oleysa.dtl",
+"cordelle_roy": "res://dialogic/timelines/monday/day/cordelle_roy.dtl",
+"durai_oleysa": "res://dialogic/timelines/monday/day/durai_oleysa.dtl",
+"durai_roy": "res://dialogic/timelines/monday/day/durai_roy.dtl",
+"oleysa_roy": "res://dialogic/timelines/monday/day/oleysa_roy.dtl"
 }
 layout/style_directory={}
 layout/style_list=[]
