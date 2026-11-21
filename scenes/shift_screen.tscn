@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d3j2og8et4yew" path="res://scripts/shift_screen.gd" id="1_u2nxn"]
 [ext_resource type="Resource" uid="uid://caq5bml66n7wm" path="res://dialogic/timelines/monday/day/cordelle_roy.dtl" id="2_r222v"]
+[ext_resource type="Script" uid="uid://d0ptqnbudhkyj" path="res://addons/dialogic/Modules/Character/node_portrait_container.gd" id="3_37jfs"]
 [ext_resource type="Script" uid="uid://bak74s0kcr0ao" path="res://addons/dialogic/Modules/Text/node_name_label.gd" id="3_rouil"]
 [ext_resource type="Script" uid="uid://drhfq6rmdeuri" path="res://addons/dialogic/Modules/Text/node_dialog_text.gd" id="4_37jfs"]
 
@@ -83,9 +84,23 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 8
 
-[node name="Spacer" type="Control" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer" unique_id=126393700]
+[node name="PortraitArea" type="HBoxContainer" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer" unique_id=1479605587]
 layout_mode = 2
 size_flags_vertical = 3
+
+[node name="LeftPosition" type="Control" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer/PortraitArea" unique_id=751367774]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("3_37jfs")
+container_ids = PackedStringArray("left")
+metadata/_custom_type_script = "uid://d0ptqnbudhkyj"
+
+[node name="RightPosition" type="Control" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer/PortraitArea" unique_id=638361624]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("3_37jfs")
+container_ids = PackedStringArray("right")
+metadata/_custom_type_script = "uid://d0ptqnbudhkyj"
 
 [node name="DialogueBox" type="PanelContainer" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer" unique_id=452072679]
 layout_mode = 2

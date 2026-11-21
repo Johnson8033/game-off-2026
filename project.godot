@@ -28,12 +28,9 @@ directories/dch_directory={
 directories/dtl_directory={
 "cordelle_roy": "res://dialogic/timelines/monday/day/cordelle_roy.dtl"
 }
-layout/style_directory={
-"": "res://dialogic/styles/CCTV.tres",
-"CCTV": "res://dialogic/styles/CCTV.tres"
-}
-layout/style_list=["res://dialogic/styles/CCTV.tres"]
-layout/default_style="res://dialogic/styles/CCTV.tres"
+layout/style_directory={}
+layout/style_list=[]
+layout/default_style=""
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1

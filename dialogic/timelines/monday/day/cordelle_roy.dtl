@@ -1,3 +1,6 @@
+join roy lefttest
+join cordelle righttest
+[wait time="10.0"]
 roy: Hm, hm hm...
 cordelle: ...Oh, hi!! Are you Roy?
 roy: Hi.
