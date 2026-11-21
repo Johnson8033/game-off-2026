@@ -84,22 +84,29 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 8
 
-[node name="PortraitArea" type="HBoxContainer" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer" unique_id=1479605587]
+[node name="PortraitArea" type="Control" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer" unique_id=828729560]
 layout_mode = 2
 size_flags_vertical = 3
 
 [node name="LeftPosition" type="Control" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer/PortraitArea" unique_id=751367774]
-layout_mode = 2
+anchors_preset = 0
+offset_right = 302.0
+offset_bottom = 472.0
 size_flags_horizontal = 3
 script = ExtResource("3_37jfs")
 container_ids = PackedStringArray("left")
+size_mode = 0
 metadata/_custom_type_script = "uid://d0ptqnbudhkyj"
 
 [node name="RightPosition" type="Control" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer/PortraitArea" unique_id=638361624]
-layout_mode = 2
+anchors_preset = 0
+offset_left = 306.0
+offset_right = 609.0
+offset_bottom = 472.0
 size_flags_horizontal = 3
 script = ExtResource("3_37jfs")
 container_ids = PackedStringArray("right")
+size_mode = 0
 metadata/_custom_type_script = "uid://d0ptqnbudhkyj"
 
 [node name="DialogueBox" type="PanelContainer" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer" unique_id=452072679]

@@ -86,7 +86,8 @@ var debug_draw := false
 
 
 func _ready() -> void:
-	debug_draw = DialogicUtil.autoload().PortraitContainers.debug_draw
+	if not Engine.is_editor_hint():
+		debug_draw = DialogicUtil.autoload().PortraitContainers.debug_draw
 	match mode:
 		PositionModes.POSITION:
 			add_to_group('dialogic_portrait_con_position')
