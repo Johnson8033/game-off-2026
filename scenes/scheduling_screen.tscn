@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://n1ulnqvvkc05" path="res://scripts/scheduling_screen.gd" id="1_ijjfh"]
 [ext_resource type="Script" uid="uid://bfqo4jb7m4x26" path="res://scripts/employee_button.gd" id="2_a3c1e"]
 
-[node name="SchedulingScreen" type="Control" unique_id=731815415 node_paths=PackedStringArray("employee_buttons", "selection_label", "confirm_button")]
+[node name="SchedulingScreen" type="Control" unique_id=731815415 node_paths=PackedStringArray("employee_buttons", "selection_label", "confirm_button", "title_label", "day_employees_label", "night_employees_label")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,9 +11,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ijjfh")
-employee_buttons = [NodePath("CenterContainer/VBoxContainer/RoyButton"), NodePath("CenterContainer/VBoxContainer/CordelleButton"), NodePath("CenterContainer/VBoxContainer/OleysaButton"), NodePath("CenterContainer/VBoxContainer/DuraiButton")]
+employee_buttons = [NodePath("CenterContainer/VBoxContainer/EmployeeRow/RoyButton"), NodePath("CenterContainer/VBoxContainer/EmployeeRow/CordelleButton"), NodePath("CenterContainer/VBoxContainer/EmployeeRow/OleysaButton"), NodePath("CenterContainer/VBoxContainer/EmployeeRow/DuraiButton")]
 selection_label = NodePath("CenterContainer/VBoxContainer/SelectionLabel")
 confirm_button = NodePath("CenterContainer/VBoxContainer/ConfirmButton")
+title_label = NodePath("CenterContainer/VBoxContainer/TitleLabel")
+day_employees_label = NodePath("CenterContainer/VBoxContainer/ShiftRow/DayPanel/VBoxContainer/DayEmployeesLabel")
+night_employees_label = NodePath("CenterContainer/VBoxContainer/ShiftRow/NightPanel/VBoxContainer/NightEmployeesLabel")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1588419000]
 layout_mode = 1
@@ -25,42 +28,101 @@ grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=2095871967]
 layout_mode = 2
+theme_override_constants/separation = 20
 
 [node name="TitleLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=703939224]
 layout_mode = 2
-text = "	Assign 2 employees to the day shift"
+theme_override_font_sizes/font_size = 36
+horizontal_alignment = 1
 
-[node name="RoyButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1651071212]
+[node name="InstructionLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1005423461]
 layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Assign two employees to the day shift"
+horizontal_alignment = 1
+
+[node name="EmployeeRow" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=1252698367]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="RoyButton" type="Button" parent="CenterContainer/VBoxContainer/EmployeeRow" unique_id=1651071212]
+custom_minimum_size = Vector2(140, 180)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
 toggle_mode = true
 text = "Roy"
 script = ExtResource("2_a3c1e")
 
-[node name="CordelleButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1191052297]
+[node name="CordelleButton" type="Button" parent="CenterContainer/VBoxContainer/EmployeeRow" unique_id=1191052297]
+custom_minimum_size = Vector2(140, 180)
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 toggle_mode = true
 text = "Cordelle"
 script = ExtResource("2_a3c1e")
 employee_id = 1
 
-[node name="OleysaButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1288716728]
+[node name="OleysaButton" type="Button" parent="CenterContainer/VBoxContainer/EmployeeRow" unique_id=1288716728]
+custom_minimum_size = Vector2(140, 180)
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 toggle_mode = true
 text = "Oleysa"
 script = ExtResource("2_a3c1e")
 employee_id = 2
 
-[node name="DuraiButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1701847168]
+[node name="DuraiButton" type="Button" parent="CenterContainer/VBoxContainer/EmployeeRow" unique_id=1701847168]
+custom_minimum_size = Vector2(140, 180)
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 toggle_mode = true
 text = "Durai"
 script = ExtResource("2_a3c1e")
 employee_id = 3
+
+[node name="ShiftRow" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=1641195665]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="DayPanel" type="PanelContainer" parent="CenterContainer/VBoxContainer/ShiftRow" unique_id=871524238]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/ShiftRow/DayPanel" unique_id=2119167628]
+layout_mode = 2
+
+[node name="DayTitle" type="Label" parent="CenterContainer/VBoxContainer/ShiftRow/DayPanel/VBoxContainer" unique_id=58454797]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Day Shift"
+
+[node name="DayEmployeesLabel" type="Label" parent="CenterContainer/VBoxContainer/ShiftRow/DayPanel/VBoxContainer" unique_id=1142807457]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="NightPanel" type="PanelContainer" parent="CenterContainer/VBoxContainer/ShiftRow" unique_id=681271011]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/ShiftRow/NightPanel" unique_id=1529109048]
+layout_mode = 2
+
+[node name="NightTitle" type="Label" parent="CenterContainer/VBoxContainer/ShiftRow/NightPanel/VBoxContainer" unique_id=765238484]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Night Shift"
+
+[node name="NightEmployeesLabel" type="Label" parent="CenterContainer/VBoxContainer/ShiftRow/NightPanel/VBoxContainer" unique_id=1984275521]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
 
 [node name="SelectionLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=515210205]
 layout_mode = 2
 text = "	Selected: 0/2"
 
 [node name="ConfirmButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1885524488]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "	Confirm Schedule"

@@ -1,0 +1,5 @@
+This shift's dialogue has not been implemented yet.
+if Game.game_state.count_good_shifts() >= 2:
+	game: The store has been performing well lately.
+else:
+	game: Things haven't been going particularly well.

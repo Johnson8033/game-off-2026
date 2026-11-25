@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="game-off-2026"
-run/main_scene="uid://cy1kino0cxjeq"
+run/main_scene="uid://c0e61phvjr377"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -35,7 +35,14 @@ directories/dtl_directory={
 "cordelle_roy": "res://dialogic/timelines/monday/day/cordelle_roy.dtl",
 "durai_oleysa": "res://dialogic/timelines/monday/day/durai_oleysa.dtl",
 "durai_roy": "res://dialogic/timelines/monday/day/durai_roy.dtl",
-"oleysa_roy": "res://dialogic/timelines/monday/day/oleysa_roy.dtl"
+"night/cordelle_durai": "res://dialogic/timelines/monday/night/cordelle_durai.dtl",
+"night/cordelle_oleysa": "res://dialogic/timelines/monday/night/cordelle_oleysa.dtl",
+"night/cordelle_roy": "res://dialogic/timelines/monday/night/cordelle_roy.dtl",
+"night/durai_oleysa": "res://dialogic/timelines/monday/night/durai_oleysa.dtl",
+"night/durai_roy": "res://dialogic/timelines/monday/night/durai_roy.dtl",
+"night/oleysa_roy": "res://dialogic/timelines/monday/night/oleysa_roy.dtl",
+"oleysa_roy": "res://dialogic/timelines/monday/day/oleysa_roy.dtl",
+"placeholder": "res://dialogic/timelines/placeholder.dtl"
 }
 layout/style_directory={}
 layout/style_list=[]
@@ -77,8 +84,9 @@ glossary/default_case_sensitive=true
 
 [display]
 
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [editor_plugins]
 
@@ -110,6 +118,7 @@ dialogic_default_action={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

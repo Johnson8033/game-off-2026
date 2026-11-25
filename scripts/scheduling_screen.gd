@@ -6,6 +6,9 @@ signal schedule_confirmed(day_employees: Array[Employee.Id])
 @export var employee_buttons: Array[EmployeeButton]
 @export var selection_label: Label
 @export var confirm_button: Button
+@export var title_label: Label
+@export var day_employees_label: Label
+@export var night_employees_label: Label
 
 var selected_employees: Array[Employee.Id] = []
 
@@ -19,6 +22,11 @@ func _ready() -> void:
 
 	confirm_button.pressed.connect(_on_confirm_pressed)
 	_update_ui()
+
+
+func set_day(day: GameState.Day) -> void:
+	var day_name := str(GameState.Day.keys()[day]).capitalize()
+	title_label.text = "%s — Staff Schedule" % day_name
 
 
 func _on_employee_toggled(
@@ -38,36 +46,41 @@ func _update_ui() -> void:
 
 	confirm_button.disabled = selected_employees.size() != 2
 
+	var day_names: Array[String] = []
+	var night_names: Array[String] = []
+
 	for button in employee_buttons:
+		var is_selected := button.employee_id in selected_employees
+
 		button.disabled = (
 			selected_employees.size() == 2
-			and button.employee_id not in selected_employees
+			and not is_selected
 		)
+
+		if is_selected:
+			day_names.append(button.text)
+		else:
+			night_names.append(button.text)
+
+	while day_names.size() < 2:
+		day_names.append("Empty slot")
+
+	day_employees_label.text = "\n".join(day_names)
+
+	if selected_employees.size() == 2:
+		night_employees_label.text = "\n".join(night_names)
+	else:
+		night_employees_label.text = "Pending\nPending"
 
 
 func _on_confirm_pressed() -> void:
-	var day_employees := selected_employees.duplicate()
-	day_employees.sort()
+	schedule_confirmed.emit(selected_employees.duplicate())
 
-	var night_employees: Array[Employee.Id] = [
-		Employee.Id.ROY,
-		Employee.Id.CORDELLE,
-		Employee.Id.OLEYSA,
-		Employee.Id.DURAI
-	]
 
-	for employee in day_employees:
-		night_employees.erase(employee)
+func reset_selection() -> void:
+	selected_employees.clear()
 
-	print(
-		day_employees.map(
-			func(id: Employee.Id): return Employee.to_dialogic_id(id)
-		)
-	)
-	print(
-		night_employees.map(
-			func(id: Employee.Id): return Employee.to_dialogic_id(id)
-		)
-	)
+	for button in employee_buttons:
+		button.set_pressed_no_signal(false)
 
-	schedule_confirmed.emit(day_employees)
+	_update_ui()

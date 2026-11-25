@@ -13,7 +13,7 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[node name="ShiftScreen" type="Control" unique_id=914708762 node_paths=PackedStringArray("status_label", "start_button")]
+[node name="ShiftScreen" type="Control" unique_id=914708762 node_paths=PackedStringArray("status_label", "start_button", "day_label", "time_label", "shift_label", "progress_label", "employees_label", "performance_label")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,6 +24,12 @@ script = ExtResource("1_u2nxn")
 status_label = NodePath("MarginContainer/HBoxContainer/InfoPanel/MarginContainer/VBoxContainer/StatusLabel")
 start_button = NodePath("MarginContainer/HBoxContainer/InfoPanel/MarginContainer/VBoxContainer/StartButton")
 timeline = ExtResource("2_r222v")
+day_label = NodePath("MarginContainer/HBoxContainer/ClockPanel/MarginContainer/VBoxContainer/DayLabel")
+time_label = NodePath("MarginContainer/HBoxContainer/ClockPanel/MarginContainer/VBoxContainer/TimeLabel")
+shift_label = NodePath("MarginContainer/HBoxContainer/ClockPanel/MarginContainer/VBoxContainer/ShiftLabel")
+progress_label = NodePath("MarginContainer/HBoxContainer/ClockPanel/MarginContainer/VBoxContainer/ProgressLabel")
+employees_label = NodePath("MarginContainer/HBoxContainer/InfoPanel/MarginContainer/VBoxContainer/EmployeesLabel")
+performance_label = NodePath("MarginContainer/HBoxContainer/InfoPanel/MarginContainer/VBoxContainer/PerformanceLabel")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=291944181]
 layout_mode = 1
@@ -47,12 +53,32 @@ size_flags_horizontal = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/ClockPanel" unique_id=2097844154]
 layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
 
-[node name="TimeLabel" type="Label" parent="MarginContainer/HBoxContainer/ClockPanel/MarginContainer" unique_id=469111944]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/ClockPanel/MarginContainer" unique_id=72626986]
 layout_mode = 2
-theme_override_font_sizes/font_size = 58
+theme_override_constants/separation = 12
+
+[node name="DayLabel" type="Label" parent="MarginContainer/HBoxContainer/ClockPanel/MarginContainer/VBoxContainer" unique_id=733877520]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+
+[node name="TimeLabel" type="Label" parent="MarginContainer/HBoxContainer/ClockPanel/MarginContainer/VBoxContainer" unique_id=469111944]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
 text = "9:00"
 horizontal_alignment = 1
+
+[node name="ShiftLabel" type="Label" parent="MarginContainer/HBoxContainer/ClockPanel/MarginContainer/VBoxContainer" unique_id=1167404130]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+
+[node name="ProgressLabel" type="Label" parent="MarginContainer/HBoxContainer/ClockPanel/MarginContainer/VBoxContainer" unique_id=1509745667]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
 
 [node name="CCTVPanel" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=2048247054]
 layout_mode = 2
@@ -137,15 +163,34 @@ size_flags_horizontal = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/InfoPanel" unique_id=785402476]
 layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/InfoPanel/MarginContainer" unique_id=1962315424]
 layout_mode = 2
+theme_override_constants/separation = 12
 
 [node name="InfoLabel" type="Label" parent="MarginContainer/HBoxContainer/InfoPanel/MarginContainer/VBoxContainer" unique_id=1006784195]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "Shift Info"
+theme_override_font_sizes/font_size = 26
+text = "On Duty"
 horizontal_alignment = 1
+
+[node name="EmployeesLabel" type="Label" parent="MarginContainer/HBoxContainer/InfoPanel/MarginContainer/VBoxContainer" unique_id=149591676]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/InfoPanel/MarginContainer/VBoxContainer" unique_id=2080496580]
+layout_mode = 2
+
+[node name="PerformanceLabel" type="Label" parent="MarginContainer/HBoxContainer/InfoPanel/MarginContainer/VBoxContainer" unique_id=1135325098]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/HBoxContainer/InfoPanel/MarginContainer/VBoxContainer" unique_id=163035631]
+layout_mode = 2
 
 [node name="StatusLabel" type="Label" parent="MarginContainer/HBoxContainer/InfoPanel/MarginContainer/VBoxContainer" unique_id=894884420]
 layout_mode = 2
@@ -154,6 +199,7 @@ text = "Ready"
 horizontal_alignment = 1
 
 [node name="StartButton" type="Button" parent="MarginContainer/HBoxContainer/InfoPanel/MarginContainer/VBoxContainer" unique_id=925710272]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 20
 text = "Start Shift"

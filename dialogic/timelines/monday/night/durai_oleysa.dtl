@@ -1,0 +1,33 @@
+join durai left
+join oleysa right
+
+oleysa: Good evening, Durai.
+durai: God, is it that late already? I'm not super eager to get out there. I don't know if I can really, "perform", in this cold weather...
+oleysa: You have a 2 inch thick mascot costume. You'll be fine.
+Durai exits
+durai: OH, HELLO YOUNG MAN! GEE, YOUR CLOTHES LOOK DIRTY! WHY NOT COME IN AND BUY SOME LAUNDRY DETERGENT?
+durai: AH, SOME GENTLEMEN ON A NIGHT OUT! I KNOW ALL ABOUT NIGHTS OUT - MY FAMILY, BACK IN SAVINGSLAND, USED TO -
+durai: SIR, THAT'S JUST NOT A VERY NICE THING TO SAY. YEAH OF COURSE YOU FIND IT FUNNY.
+durai: UM, YOU THERE, MA'AM! PERHAPS YOU'RE OUT LATE TO GO SEE A MOVIE? WHY NOT COME IN AND BUY SOME POPCORN... UM, OKAY!
+Durai enters
+durai: I don't think anyone liked my act today.
+oleysa: Well, you need to understand, Durai, that people who walk around in the dark are pretty different to your usual crowd.
+durai: Oh, do you think I should, like... change tack?
+oleysa: Yes. These night people...
+oleysa: Our usual clientele, very organized. They zip in, pick up something, and leave. They have somewhere to be.
+oleysa: Night people generally just waste their own time. Walking around, running a Buck's party, doing a nightclub, making a graffiti.
+oleysa: They're all kind of... stupid. So kind of just make it clear what we can offer them, and they'll flock to us like flies.
+durai: What can we offer them?
+oleysa: Oh, what do they like... Cheap beer. Coffee. Horrible food.
+durai: Ah! Okay. Loud and clear.
+Durai exits
+durai: NEED SOME HORRIBLE FOOD? HEAD RIGHT THIS WAY! OUR BEER AND COFFEE MIX IS AS CHEAP AS COULD BE!
+oleysa: Durai, no-
+customeroy: Hey, we heard about a beer and coffee cocktail. How much for a party of 5?
+oleysa: ...?
+oleysa: Um, let me just... mix it. Now.
+oleysa: ...
+oleysa: Now, the cocktail is done. It will cost, four...teen. Pounds.
+customeroy: Thanks, lady. Very punk.
+game: Durai's improvised cocktail really moved sales. Good shift.
+[signal arg="shift_good"]

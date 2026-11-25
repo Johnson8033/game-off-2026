@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://bfj5uchxcqb2n" path="res://scripts/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://c83mqjbjaschf" path="res://scenes/shift_screen.tscn" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bio827w7d0cig" path="res://scenes/scheduling_screen.tscn" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://db66g28x6mais" path="res://scenes/ending_screen.tscn" id="4_lbhrr"]
 
-[node name="Game" type="Control" unique_id=1018006508 node_paths=PackedStringArray("scheduling_screen", "shift_screen")]
+[node name="Game" type="Control" unique_id=1018006508 node_paths=PackedStringArray("scheduling_screen", "shift_screen", "ending_screen")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,9 +15,13 @@ grow_vertical = 2
 script = ExtResource("1_lnu2h")
 scheduling_screen = NodePath("SchedulingScreen")
 shift_screen = NodePath("ShiftScreen")
+ending_screen = NodePath("EndingScreen")
 
 [node name="SchedulingScreen" parent="." unique_id=731815415 instance=ExtResource("2_lnu2h")]
 layout_mode = 1
 
 [node name="ShiftScreen" parent="." unique_id=914708762 instance=ExtResource("1_yqjtg")]
+layout_mode = 1
+
+[node name="EndingScreen" parent="." unique_id=37862285 instance=ExtResource("4_lbhrr")]
 layout_mode = 1

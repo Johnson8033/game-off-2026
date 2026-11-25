@@ -1,0 +1,32 @@
+join roy left
+join durai right
+
+cordelle: ...Anyone here?
+cordelle: I'm, um, Cordelle. I'm here for the job.
+durai: .... ...
+cordelle: Hello?
+durai: (Oh, come on everybody, it's time to buy bread, it feels like bread time... feels like bread time, yeah...)
+cordelle: Oh, I'm sorry, are you Durai?
+durai: (Time to buy...) Oh! Speaking.
+cordelle: Yeah, so... Our shift, right? We need to restock the pastry aisle, and the energy drinks...
+durai: Yeah, yeah yeah yeah that sounds great, listen. I'm really sorry but I really like. Can't exactly work right now. Is that okay?
+cordelle: That's, fine! Of course that's fine. I'll just get to it, th-
+durai: See I usually act as a mascot, just outside. And people love me. But see, I heard that I was getting a greenie today.
+durai: So I thought it best to introduce myself, my story, and my practices.
+cordelle: That's... okay...
+cordelle: How long is this gonna take?
+durai: Oh, only like half an hour.
+durai: So firstly, the thing you need to understand about me, Candle, is that I have pretty dry skin. Sometimes I get flakey. So basically I kind of like, have this awesome trick...
+Time passes
+durai: Was all that clear?
+cordelle: Totally... I think some customers came in, though, so I was about to j-
+durai: Okay no wait this next part is actually important. I was born in Odessa, Texas.
+durai: Down south, the climate is a little prohibitive of what plants you can grow...
+Time passes
+durai: ...And that's how my uncle met his wife.
+cordelle: Wow... that was a great story.
+cordelle: Long.
+durai: Well, I got a million more just like it!
+durai: Take my mother's side of the family. I call this one, "The thousand year journey". We begin in 895 AD...
+game: It seems like Durai enjoyed meeting Cordelle, but Cordelle didn't enjoy meeting him. Neither of them served a single customer. Bad shift.
+[signal arg="shift_bad"]

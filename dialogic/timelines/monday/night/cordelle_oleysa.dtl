@@ -1,0 +1,26 @@
+join cordelle left
+join oleysa right
+
+cordelle: Hi!
+cordelle: Are you Oleysa? I don't think we've met...
+cordelle: I'm Cordelle. I'm new here.
+oleysa: Cordelle, mm, yes. I remember you. We spoke on the phone.
+oleysa: My name is Oleysa. And this shift, you'll be answering to me.
+oleysa: It's a shame... had we met in the morning, we may have gotten to speak to eachother. But there is work to do now.
+oleysa: You'll be restocking the pastries. Go.
+cordelle: Oh! Of course, thank you!
+Time passes
+cordelle: I think I've finished the pastries. What next?
+oleysa: You "think" you've finished?
+oleysa: Let me see...
+oleysa: These should be sorted by best-before date. Go fix it.
+Time passes
+cordelle: *yawn*, the pastries are sorted by best before. Is there anything else to do?
+oleysa: Yes, young lady. We've only just started. We recieved a delivery of refrigerated goods. Go and stock them.
+Time passes
+cordelle: I think it's... all done...
+oleysa: Ah, Cordelle. I was just explaining to this gentleman that we stock newspapers and magazines in the corner, would you mind showing him the way?
+cordelle: ...
+cordelle: Zzz...
+game: It seems like Oleysa pushed Cordelle too hard, and she fell asleep for most of the evening. Bad shift.
+[signal arg="shift_bad"]
