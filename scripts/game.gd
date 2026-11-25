@@ -3,12 +3,14 @@ extends Control
 
 @export var scheduling_screen: SchedulingScreen
 @export var shift_screen: ShiftScreen
+@export var ending_screen: EndingScreen
 
 var game_state := GameState.new()
 
 
 func _ready() -> void:
 	shift_screen.hide()
+	ending_screen.hide()
 
 	scheduling_screen.schedule_confirmed.connect(
 		_on_schedule_confirmed
@@ -66,8 +68,6 @@ func _on_shift_completed(
 
 
 func _finish_game() -> void:
-	shift_screen.status_label.text = "Week complete!"
-
-	print("Final shift history: ", game_state.shift_history)
-	print("Total good shifts: ", game_state.count_good_shifts())
-	print("Total bad shifts: ", game_state.count_bad_shifts())
+	shift_screen.hide()
+	ending_screen.configure(game_state)
+	ending_screen.show()
