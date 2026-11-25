@@ -19,7 +19,7 @@
 &"portraits": {
 "temp": {
 "export_overrides": {
-"image": "\"res://icon.svg\""
+"image": "\"res://assets/character art/placeholder_durai.svg\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
