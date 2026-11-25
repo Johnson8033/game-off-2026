@@ -7,6 +7,12 @@ var outcome: GameState.ShiftOutcome = GameState.ShiftOutcome.UNKNOWN
 @export var status_label: Label
 @export var start_button: Button
 @export var timeline: DialogicTimeline
+@export var day_label: Label
+@export var time_label: Label
+@export var shift_label: Label
+@export var progress_label: Label
+@export var employees_label: Label
+@export var performance_label: Label
 
 
 func _ready() -> void:
@@ -83,16 +89,35 @@ func configure(
 	if timeline == null:
 		return false
 
-	status_label.text = "%s %s\n%s + %s" % [
-		day_id.capitalize(),
-		shift_id.capitalize(),
+	day_label.text = day_id.capitalize()
+	shift_label.text = "%s Shift" % shift_id.capitalize()
+
+	time_label.text = (
+		"09:00" if shift == GameState.Shift.DAY else "18:00"
+	)
+
+	progress_label.text = "Day %d / %d" % [
+		int(day) + 1,
+		GameState.Day.size()
+	]
+
+	employees_label.text = "%s\n%s" % [
 		ids[0].capitalize(),
 		ids[1].capitalize()
 	]
 
+	status_label.text = "Ready"
+
 	start_button.disabled = false
 
 	return true
+
+
+func update_performance(good: int, bad: int) -> void:
+	performance_label.text = (
+        "Store Performance\n\nGood shifts: %d\nBad shifts: %d"
+		% [good, bad]
+	)
 
 
 func _on_dialogic_signal(argument: Variant) -> void:

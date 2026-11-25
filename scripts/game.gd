@@ -39,6 +39,11 @@ func _on_schedule_confirmed(
 
 
 func _prepare_current_shift() -> bool:
+	shift_screen.update_performance(
+		game_state.count_good_shifts(),
+		game_state.count_bad_shifts()
+	)
+
 	return shift_screen.configure(
 		game_state.get_current_employees(),
 		game_state.current_day,
