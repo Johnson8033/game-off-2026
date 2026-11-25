@@ -1,6 +1,8 @@
 class_name ShiftScreen
 extends Control
-signal shift_completed
+signal shift_completed(outcome: GameState.ShiftOutcome)
+
+var outcome: GameState.ShiftOutcome = GameState.ShiftOutcome.UNKNOWN
 
 @export var status_label: Label
 @export var start_button: Button
@@ -9,7 +11,18 @@ signal shift_completed
 
 func _ready() -> void:
 	start_button.pressed.connect(_on_start_pressed)
+	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
+
+
+func _input(event: InputEvent) -> void:
+	if Dialogic.current_timeline == null:
+		return
+
+	if event is InputEventKey:
+		if event.keycode == KEY_CTRL and not event.echo:
+			Dialogic.Inputs.auto_skip.time_per_event = 0.05
+			Dialogic.Inputs.auto_skip.enabled = event.pressed
 
 
 func _on_start_pressed() -> void:
@@ -22,6 +35,7 @@ func _on_start_pressed() -> void:
 
 	start_button.disabled = true
 	status_label.text = "Shift in progress"
+	outcome = GameState.ShiftOutcome.UNKNOWN
 
 	Dialogic.start_timeline(timeline)
 
@@ -29,8 +43,12 @@ func _on_start_pressed() -> void:
 func _on_timeline_ended() -> void:
 	status_label.text = "Shift complete!"
 	start_button.disabled = true
-	shift_completed.emit()
+	Dialogic.Inputs.auto_skip.enabled = false
 
+	if outcome == GameState.ShiftOutcome.UNKNOWN:
+		push_warning("Timeline ended without a shift outcome.")
+
+	shift_completed.emit(outcome)
 
 
 func configure(
@@ -74,3 +92,11 @@ func configure(
 	start_button.disabled = false
 
 	return true
+
+
+func _on_dialogic_signal(argument: Variant) -> void:
+	match argument:
+		"shift_good":
+			outcome = GameState.ShiftOutcome.GOOD
+		"shift_bad":
+			outcome = GameState.ShiftOutcome.BAD

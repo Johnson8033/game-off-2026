@@ -42,7 +42,14 @@ func _prepare_current_shift() -> bool:
 	)
 
 
-func _on_shift_completed() -> void:
+func _on_shift_completed(
+	outcome: GameState.ShiftOutcome
+) -> void:
+	game_state.record_shift(outcome)
+
+	print("Good shifts: ", game_state.count_good_shifts())
+	print("Bad shifts: ", game_state.count_bad_shifts())
+
 	if game_state.current_shift == GameState.Shift.DAY:
 		game_state.current_shift = GameState.Shift.NIGHT
 

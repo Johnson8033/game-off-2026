@@ -29,3 +29,4 @@ roy: ...Um, of course, sir. That'll be £2.95.
 roy: ...
 roy: Heh, that crazy kid.
 game: : It seems like Durai is eager to impress Roy, and pushes himself to work harder. Good shift.
+[signal arg="shift_good"]

@@ -34,3 +34,4 @@ durai: LEGEND SAYS IF YOU BUY MY BREAD, HE MIGHT GET OUT!
 durai: I SEE YOU TRYING TO IGNORE ME! PLEASE, I REALLY NEED YOU TO JUST COME IN.
 oleysa: Oh, Durai... you poor boy.
 game: Oleysa seems to have really hurt Durai - he couldn't get people to buy stuff as much as usual. Bad shift.
+[signal arg="shift_bad"]

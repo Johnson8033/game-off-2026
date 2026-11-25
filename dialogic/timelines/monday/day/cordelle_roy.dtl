@@ -1,6 +1,5 @@
 join roy left
 join cordelle right
-update roy right [move_time="1.0"]
 roy: Hm, hm hm...
 cordelle: ...Oh, hi!! Are you Roy?
 roy: Hi.
@@ -40,3 +39,4 @@ cordelle: Roy... I think you like me, really. Not so deep down, I bet you have a
 roy: Oh, eh.
 
 game: I think Cordelle might be right. At least they got some work done... Good shift.
+[signal arg="shift_good"]
