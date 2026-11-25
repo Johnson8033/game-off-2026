@@ -13,7 +13,7 @@ script = ExtResource("1_l6cm7")
 play_button = NodePath("CenterContainer/VBoxContainer/PlayButton")
 credits_button = NodePath("CenterContainer/VBoxContainer/CreditsButton")
 quit_button = NodePath("CenterContainer/VBoxContainer/QuitButton")
-credits_label = NodePath("CenterContainer/VBoxContainer/FooterLabel")
+credits_label = NodePath("CenterContainer/VBoxContainer/CreditsLabel")
 
 [node name="Background" type="ColorRect" parent="." unique_id=482353617]
 layout_mode = 1
