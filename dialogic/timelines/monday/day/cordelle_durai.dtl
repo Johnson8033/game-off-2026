@@ -1,4 +1,4 @@
-join roy right
+join cordelle right
 join durai left
 join game center
 join customer center
@@ -7,7 +7,7 @@ update roy right [move_time="1.0"]
 durai: HEY EVERYBODY! COME INSIDE FOR GREAT DEALS!
 durai: I SEE YOU TRYING TO IGNORE ME, MA'AM! COME IN FOR SOME GREAT DEALS!
 durai: HEY LITTLE GUY! DO YOU LIKE GREAT SAVINGS ON HOUSEHOLD ITEMS? I SURE DO! NYUK NYUK NYUK!
-roy: Oh, christ.
+cordelle: Oh, christ.
 
 durai: "Do you like... great savings", eh... "Do you like, deep discounts", I don't know...
 durai: Hey, Roy.
