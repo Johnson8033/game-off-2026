@@ -55,5 +55,19 @@ func _on_shift_completed(
 
 		if not _prepare_current_shift():
 			shift_screen.status_label.text = "Night timeline missing."
+
+	elif game_state.advance_day():
+		shift_screen.hide()
+		scheduling_screen.reset_selection()
+		scheduling_screen.show()
+
 	else:
-		shift_screen.status_label.text = "Monday complete!"
+		_finish_game()
+
+
+func _finish_game() -> void:
+	shift_screen.status_label.text = "Week complete!"
+
+	print("Final shift history: ", game_state.shift_history)
+	print("Total good shifts: ", game_state.count_good_shifts())
+	print("Total bad shifts: ", game_state.count_bad_shifts())

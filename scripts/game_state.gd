@@ -68,3 +68,16 @@ func count_bad_shifts() -> int:
 	return shift_history.filter(
 		func(result): return result["outcome"] == ShiftOutcome.BAD
 	).size()
+
+
+func advance_day() -> bool:
+	if current_day == Day.FRIDAY:
+		return false
+
+	current_day = (current_day + 1) as Day
+	current_shift = Shift.DAY
+
+	day_employees.clear()
+	night_employees.clear()
+
+	return true

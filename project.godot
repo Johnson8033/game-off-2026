@@ -41,7 +41,8 @@ directories/dtl_directory={
 "night/durai_oleysa": "res://dialogic/timelines/monday/night/durai_oleysa.dtl",
 "night/durai_roy": "res://dialogic/timelines/monday/night/durai_roy.dtl",
 "night/oleysa_roy": "res://dialogic/timelines/monday/night/oleysa_roy.dtl",
-"oleysa_roy": "res://dialogic/timelines/monday/day/oleysa_roy.dtl"
+"oleysa_roy": "res://dialogic/timelines/monday/day/oleysa_roy.dtl",
+"placeholder": "res://dialogic/timelines/placeholder.dtl"
 }
 layout/style_directory={}
 layout/style_list=[]

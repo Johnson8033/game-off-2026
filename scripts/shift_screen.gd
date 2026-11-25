@@ -75,7 +75,8 @@ func configure(
 
 	if not ResourceLoader.exists(path):
 		push_warning("Timeline not found: " + path)
-		return false
+		path = "res://dialogic/timelines/placeholder.dtl"
+		#return false
 
 	timeline = load(path) as DialogicTimeline
 

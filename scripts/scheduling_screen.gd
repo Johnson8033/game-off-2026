@@ -47,3 +47,12 @@ func _update_ui() -> void:
 
 func _on_confirm_pressed() -> void:
 	schedule_confirmed.emit(selected_employees.duplicate())
+
+
+func reset_selection() -> void:
+	selected_employees.clear()
+
+	for button in employee_buttons:
+		button.set_pressed_no_signal(false)
+
+	_update_ui()
