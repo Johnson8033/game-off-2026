@@ -48,6 +48,7 @@ func _on_shift_completed(
 	outcome: GameState.ShiftOutcome
 ) -> void:
 	game_state.record_shift(outcome)
+	scheduling_screen.set_day(game_state.current_day)
 
 	print("Good shifts: ", game_state.count_good_shifts())
 	print("Bad shifts: ", game_state.count_bad_shifts())
@@ -60,6 +61,7 @@ func _on_shift_completed(
 
 	elif game_state.advance_day():
 		shift_screen.hide()
+		scheduling_screen.set_day(game_state.current_day)
 		scheduling_screen.reset_selection()
 		scheduling_screen.show()
 
