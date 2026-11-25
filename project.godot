@@ -81,6 +81,7 @@ audio/channel_defaults={
 }
 }
 glossary/default_case_sensitive=true
+text/autocolor_names=true
 
 [display]
 
