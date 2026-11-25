@@ -1,7 +1,7 @@
 join roy right
 join durai left
-join game center 
-join customer center 
+join game center
+join customer center
 update roy right [move_time="1.0"]
 
 durai: HEY EVERYBODY! COME INSIDE FOR GREAT DEALS!
@@ -22,11 +22,11 @@ durai: ...You'll see.
 durai: OH, OH HO HO! DON'T WANT TO COME IN FOR SOME SAVINGS? THEN YOU'RE PART OF THE PROBLEM!
 durai: YOU THERE, SIR! LET ME TELL YOU ABOUT THE POLITICAL SYSTEM OF SAVINGSLAND... OR, WALK AWAY! SEE YOU SOON! NYUK NYUK NYUK!
 roy: ...
-customer: : Hi. I've just heard about the plight of the people of Savingsland. I hope they can save their king and take back their country.
-customer: : Just this, please.
+customer: \: Hi. I've just heard about the plight of the people of Savingsland. I hope they can save their king and take back their country.
+customer: \: Just this, please.
 roy: Savingsland isn't a re -
 roy: ...Um, of course, sir. That'll be £2.95.
 roy: ...
 roy: Heh, that crazy kid.
-game: : It seems like Durai is eager to impress Roy, and pushes himself to work harder. Good shift.
+game: \: It seems like Durai is eager to impress Roy, and pushes himself to work harder. Good shift.
 [signal arg="shift_good"]
