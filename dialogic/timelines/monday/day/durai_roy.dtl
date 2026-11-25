@@ -1,29 +1,31 @@
-join roy left
-join durai right
+join durai left
+join roy right
 
-roy: Durai, walking in at 6.15. As usual.
-durai: God, is it that late already? I'm not super eager to get out there. I don't know if I can really, "perform", in this cold weather...
-roy: Doesn't all true art rely on inherent suffering? Your mascot suit is thick. You'll obviously be fine...
-Durai leaves
-durai: OH, HELLO YOUNG MAN! GEE, YOUR CLOTHES LOOK DIRTY! WHY NOT COME IN AND BUY SOME LAUNDRY DETERGENT?
-durai: AH, SOME GENTLEMEN ON A NIGHT OUT! I KNOW ALL ABOUT NIGHTS OUT - MY FAMILY, BACK IN SAVINGSLAND, USED TO -
-durai: SIR, THAT'S JUST NOT A VERY NICE THING TO SAY. YEAH OF COURSE YOU FIND IT FUNNY.
-durai: UM, YOU THERE, MA'AM! PERHAPS YOU'RE OUT LATE TO GO SEE A MOVIE? WHY NOT COME IN AND BUY SOME POPCORN... UM, OKAY!
-Durai enters
-durai: Gosh... tough crowd out there today.
-roy: Mm. Totally.
-roy: Durai, you know, I think you shouldn't rib into the people who seem down on their luck.
-roy: ...I mean, when I used to be homeless, I carried a knife.
-durai: "Used to be homeless"... are you not homeless now?
-durai: I just always thought you were.
-durai: Like you're always working. I remember when I started I thought "Gee, he must really need this."
-roy: Mm. Nope. Not homeless anymore.
-roy: Say, Durai. I heard that Oleysa said it'd be a good idea to list out all our stock alphabetically, so people can just listen and check if we have what they need.
-durai: Oleysa said that?!
-durai: She's hardly ever taken an interest to Breadsworth. I guess I could give it a shot!
-durai: See you in a bit, Roy!
-Durai leaves
-durai: GEE, WE HAVE SO MUCH IN STOCK TODAY!
-durai: APPLES... ASPARAGUS... AUBERGINE... AVOCADOS... 
-game: Durai's tactic confused passerbies more than anything. Roy seemed to enjoy frustrating him, but Durai didn't bring in the customers like he usually does. Bad shift.
-[signal arg="shift_bad"]
+durai: HEY EVERYBODY! COME INSIDE FOR GREAT DEALS!
+durai: I SEE YOU TRYING TO IGNORE ME, MA'AM! COME IN FOR SOME GREAT DEALS!
+durai: HEY LITTLE GUY! DO YOU LIKE GREAT SAVINGS ON HOUSEHOLD ITEMS? I SURE DO! NYUK NYUK NYUK!
+durai: Oh, christ.
+update durai center
+durai: "Do you like... great savings", eh... "Do you like, deep discounts", I don't know...
+durai: Hey, Roy.
+durai: Roy. Are you Roy? You are Roy, I can recognize your bald spot.
+durai: Do you prefer "great savings" or "deep discounts"? "Deep discounts" has that alliteration, but "great savings" sounds a bit....
+roy: Like you're just trying to sell stuff?
+durai: What? No. All of the acting I do out there, it's all genuine and artistic. It's not motivated by any kind of money. The character -
+roy: Alright, Durai. You left your notebook in the breakroom. The character "hails from Savingsland", but moved to our world to "spread the joy of lower prices"?
+roy: His backstory sounds pretty monetary. Not exactly Oscar potential.
+durai: ...You'll see.
+update durai left
+durai: OH, OH HO HO! DON'T WANT TO COME IN FOR SOME SAVINGS? THEN YOU'RE PART OF THE PROBLEM!
+durai: YOU THERE, SIR! LET ME TELL YOU ABOUT THE POLITICAL SYSTEM OF SAVINGSLAND... OR, WALK AWAY! SEE YOU SOON! NYUK NYUK NYUK!
+roy: ...
+join customer leftmost
+customer: Hi. I've just heard about the plight of the people of Savingsland. I hope they can save their king and take back their country.
+customer: Just this, please.
+roy: Savingsland isn't a re -
+roy: ...Um, of course, sir. That'll be £2.95.
+leave customer
+roy: ...
+roy: Heh, that crazy kid.
+It seems like Durai is eager to impress Roy, and pushes himself to work harder. Good shift.
+[signal arg="shift_good"]
