@@ -46,28 +46,4 @@ func _update_ui() -> void:
 
 
 func _on_confirm_pressed() -> void:
-	var day_employees := selected_employees.duplicate()
-	day_employees.sort()
-
-	var night_employees: Array[Employee.Id] = [
-		Employee.Id.ROY,
-		Employee.Id.CORDELLE,
-		Employee.Id.OLEYSA,
-		Employee.Id.DURAI
-	]
-
-	for employee in day_employees:
-		night_employees.erase(employee)
-
-	print(
-		day_employees.map(
-			func(id: Employee.Id): return Employee.to_dialogic_id(id)
-		)
-	)
-	print(
-		night_employees.map(
-			func(id: Employee.Id): return Employee.to_dialogic_id(id)
-		)
-	)
-
-	schedule_confirmed.emit(day_employees)
+	schedule_confirmed.emit(selected_employees.duplicate())
