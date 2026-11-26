@@ -110,29 +110,51 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 8
 
-[node name="PortraitArea" type="Control" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer" unique_id=828729560]
+[node name="PortraitGridContainer" type="GridContainer" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer" unique_id=976885912]
 layout_mode = 2
 size_flags_vertical = 3
+columns = 5
 
-[node name="LeftPosition" type="Control" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer/PortraitArea" unique_id=751367774]
-anchors_preset = 0
-offset_right = 302.0
-offset_bottom = 472.0
+[node name="LeftmostPosition" type="Control" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer/PortraitGridContainer" unique_id=2133006512]
+layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("3_37jfs")
+container_ids = PackedStringArray("1")
+metadata/_custom_type_script = "uid://d0ptqnbudhkyj"
+
+[node name="LeftPosition" type="Control" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer/PortraitGridContainer" unique_id=751367774]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("3_37jfs")
 container_ids = PackedStringArray("left")
 size_mode = 0
 metadata/_custom_type_script = "uid://d0ptqnbudhkyj"
 
-[node name="RightPosition" type="Control" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer/PortraitArea" unique_id=638361624]
-anchors_preset = 0
-offset_left = 306.0
-offset_right = 609.0
-offset_bottom = 472.0
+[node name="CenterPosition" type="Control" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer/PortraitGridContainer" unique_id=644033780]
+layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("3_37jfs")
+container_ids = PackedStringArray("1")
+metadata/_custom_type_script = "uid://d0ptqnbudhkyj"
+
+[node name="RightPosition" type="Control" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer/PortraitGridContainer" unique_id=638361624]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("3_37jfs")
 container_ids = PackedStringArray("right")
 size_mode = 0
+metadata/_custom_type_script = "uid://d0ptqnbudhkyj"
+
+[node name="RightmostPosition" type="Control" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer/PortraitGridContainer" unique_id=1916962560]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("3_37jfs")
+container_ids = PackedStringArray("1")
 metadata/_custom_type_script = "uid://d0ptqnbudhkyj"
 
 [node name="DialogueBox" type="PanelContainer" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer" unique_id=452072679]
@@ -146,6 +168,7 @@ theme_override_constants/separation = 8
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 script = ExtResource("3_rouil")
+hide_when_empty = false
 metadata/_custom_type_script = "uid://bak74s0kcr0ao"
 
 [node name="DailogText" type="RichTextLabel" parent="MarginContainer/HBoxContainer/CCTVPanel/MarginContainer/CCTVContent/VBoxContainer/DialogueBox/VBoxContainer" unique_id=1495475194 node_paths=PackedStringArray("textbox_root")]
