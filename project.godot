@@ -45,7 +45,7 @@ directories/dtl_directory={
 "placeholder": "res://dialogic/timelines/placeholder.dtl"
 }
 layout/style_directory={}
-layout/style_list=[]
+layout/style_list=[""]
 layout/default_style=""
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -82,6 +82,8 @@ audio/channel_defaults={
 }
 glossary/default_case_sensitive=true
 text/autocolor_names=true
+variables={}
+animations/join_default="Fade In Up"
 
 [display]
 
